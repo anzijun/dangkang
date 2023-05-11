@@ -1,4 +1,4 @@
-package com.dangkang.report.util;
+package com.dangkang.shclearinghouse.app.util;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;

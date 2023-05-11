@@ -1,4 +1,4 @@
-package com.dangkang.report.util;
+package com.dangkang.shclearinghouse.app.util;
 
 
 import com.dangkang.exception.DangKangAppException;
