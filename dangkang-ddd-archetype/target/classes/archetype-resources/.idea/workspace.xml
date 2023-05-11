@@ -1,0 +1,375 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <${package}ponent name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </${package}ponent>
+  <${package}ponent name="ChangeListManager">
+    <list default="true" id="2ee855d5-2bb6-4a15-9611-97107043391a" name="Default Changelist" ${package}ment="网络错误bug解决">
+      <change beforePath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/.idea/workspace.xml" beforeDir="false" afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/pom.xml" beforeDir="false" afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </${package}ponent>
+  <${package}ponent name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="package-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </${package}ponent>
+  <${package}ponent name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="${symbol_dollar}PROJECT_DIR${symbol_dollar}" />
+  </${package}ponent>
+  <${package}ponent name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </${package}ponent>
+  <${package}ponent name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:${symbol_escape}mavenRepository" />
+        <option name="userSettingsFile" value="D:${symbol_escape}maven${symbol_escape}apache-maven-3.8.1${symbol_escape}conf${symbol_escape}settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </${package}ponent>
+  <${package}ponent name="ProjectId" id="2J56bGVYQ02JJ9y4CriADj1IbAY" />
+  <${package}ponent name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </${package}ponent>
+  <${package}ponent name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </${package}ponent>
+  <${package}ponent name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="${symbol_dollar}PROJECT_DIR${symbol_dollar}" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.splitter.proportion" value="0.33095723" />
+  </${package}ponent>
+  <${package}ponent name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:${symbol_escape}ddd${symbol_escape}bond-domain${symbol_escape}src${symbol_escape}main${symbol_escape}java${symbol_escape}${package}${symbol_escape}bond${symbol_escape}domain${symbol_escape}exception" />
+      <recent name="F:${symbol_escape}ddd${symbol_escape}bond-domain${symbol_escape}src${symbol_escape}main${symbol_escape}java${symbol_escape}${package}${symbol_escape}bond${symbol_escape}domain${symbol_escape}exception${symbol_escape}strategy" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="${package}.${project-name}.domain.exception.net.NetErrorManager" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:${symbol_escape}ddd-demo${symbol_escape}${project-name}${symbol_escape}${project-name}-infrastructure${symbol_escape}src${symbol_escape}main${symbol_escape}resources${symbol_escape}config" />
+      <recent name="F:${symbol_escape}ddd-demo${symbol_escape}${project-name}${symbol_escape}${project-name}-infrastructure${symbol_escape}src${symbol_escape}main${symbol_escape}resources" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="${package}.ddd.infrastructure.external" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="${package}.ddd.domain.exception.net.strategy" />
+      <recent name="${package}.ddd.domain.exception" />
+    </key>
+  </${package}ponent>
+  <${package}ponent name="RunManager" selected="JUnit.DomainLogicalRuleImplTest.checkTest">
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="${package}.${project-name}.infrastructure.test.test" />
+      <module name="${project-name}-infrastructure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="${package}.${project-name}.infrastructure.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoFacadeImplTest.payTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="${project-name}-infrastructure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="${package}.ddd.infrastructure.facadeimpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="${package}.ddd.infrastructure.facadeimpl" />
+      <option name="MAIN_CLASS_NAME" value="${package}.ddd.infrastructure.facadeimpl.DemoFacadeImplTest" />
+      <option name="METHOD_NAME" value="payTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DomainLogicalRuleImplTest.checkTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="${project-name}-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="${package}.${project-name}.app.domain.model.trade.ability.ruleimpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="${package}.${project-name}.app.domain.model.trade.ability.ruleimpl" />
+      <option name="MAIN_CLASS_NAME" value="${package}.${project-name}.app.domain.model.trade.ability.ruleimpl.DomainLogicalRuleImplTest" />
+      <option name="METHOD_NAME" value="checkTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DangkangApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="${project-name}-start" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="${package}.${project-name}.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="${package}.${project-name}.DangkangApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DangkangApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="${project-name}-start" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="${package}.${project-name}.start.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="${package}.${project-name}.start.DangkangApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DomainLogicalRuleImplTest.checkTest" />
+        <item itemvalue="Spring Boot.DangkangApplication (1)" />
+        <item itemvalue="Application.test" />
+        <item itemvalue="Spring Boot.DangkangApplication" />
+        <item itemvalue="JUnit.DemoFacadeImplTest.payTest" />
+      </list>
+    </recent_temporary>
+  </${package}ponent>
+  <${package}ponent name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <${package}ponent name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2ee855d5-2bb6-4a15-9611-97107043391a" name="Default Changelist" ${package}ment="" />
+      <created>1671355672675</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671355672675</updated>
+      <workItem from="1671355673917" duration="2108000" />
+      <workItem from="1671357861444" duration="4975000" />
+      <workItem from="1671411912491" duration="21484000" />
+      <workItem from="1671503361766" duration="12013000" />
+      <workItem from="1671589660394" duration="12122000" />
+      <workItem from="1671610366019" duration="6847000" />
+      <workItem from="1671618654047" duration="1941000" />
+      <workItem from="1671668323757" duration="13603000" />
+      <workItem from="1671759710600" duration="30662000" />
+      <workItem from="1672104831327" duration="2303000" />
+      <workItem from="1672367012846" duration="583000" />
+      <workItem from="1672367716631" duration="22721000" />
+      <workItem from="1672476830072" duration="720000" />
+      <workItem from="1672659966388" duration="8498000" />
+      <workItem from="1672709411952" duration="21515000" />
+      <workItem from="1672795730770" duration="11270000" />
+    </task>
+    <task id="LOCAL-00001" summary="错误处理组件添加">
+      <created>1671444720888</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671444720888</updated>
+    </task>
+    <task id="LOCAL-00002" summary="错误处理组件添加">
+      <created>1671505627693</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671505627693</updated>
+    </task>
+    <task id="LOCAL-00003" summary="支付调用完善">
+      <created>1671530640730</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671530640730</updated>
+    </task>
+    <task id="LOCAL-00004" summary="支付调用完善">
+      <created>1671591934982</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671591934982</updated>
+    </task>
+    <task id="LOCAL-00005" summary="支付调用完善">
+      <created>1671592845215</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671592845215</updated>
+    </task>
+    <task id="LOCAL-00006" summary="日志输出">
+      <created>1671594775973</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671594775973</updated>
+    </task>
+    <task id="LOCAL-00007" summary="日志输出">
+      <created>1671603727388</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671603727388</updated>
+    </task>
+    <task id="LOCAL-00008" summary="日志脱敏打印">
+      <created>1671611447082</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671611447082</updated>
+    </task>
+    <task id="LOCAL-00009" summary="日志脱敏打印">
+      <created>1671620466029</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671620466029</updated>
+    </task>
+    <task id="LOCAL-00010" summary="模板项目生成组件添加">
+      <created>1671692086714</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1671692086714</updated>
+    </task>
+    <task id="LOCAL-00011" summary="配置文件读取方式修改">
+      <created>1672476978291</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1672476978291</updated>
+    </task>
+    <task id="LOCAL-00012" summary="启动配置">
+      <created>1672660656574</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1672660656574</updated>
+    </task>
+    <task id="LOCAL-00013" summary="配置报错解决">
+      <created>1672667729322</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1672667729322</updated>
+    </task>
+    <task id="LOCAL-00014" summary="dto优化">
+      <created>1672715877380</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1672715877381</updated>
+    </task>
+    <task id="LOCAL-00015" summary="日志脱敏bug解决">
+      <created>1672731726488</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1672731726488</updated>
+    </task>
+    <task id="LOCAL-00016" summary="对象赋值打印">
+      <created>1672737015989</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1672737015989</updated>
+    </task>
+    <task id="LOCAL-00017" summary="unittest">
+      <created>1672737652878</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1672737652878</updated>
+    </task>
+    <task id="LOCAL-00018" summary="网络错误bug解决">
+      <created>1672817128098</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1672817128098</updated>
+    </task>
+    <task id="LOCAL-00019" summary="网络错误bug解决">
+      <created>1672818783840</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1672818783840</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </${package}ponent>
+  <${package}ponent name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </${package}ponent>
+  <${package}ponent name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </${package}ponent>
+  <${package}ponent name="VcsManagerConfiguration">
+    <MESSAGE value="错误处理组件添加" />
+    <MESSAGE value="支付调用完善" />
+    <MESSAGE value="日志输出" />
+    <MESSAGE value="日志脱敏打印" />
+    <MESSAGE value="模板项目生成组件添加" />
+    <MESSAGE value="配置文件读取方式修改" />
+    <MESSAGE value="启动配置" />
+    <MESSAGE value="配置报错解决" />
+    <MESSAGE value="dto优化" />
+    <MESSAGE value="日志脱敏bug解决" />
+    <MESSAGE value="对象赋值打印" />
+    <MESSAGE value="final ${package}mit" />
+    <MESSAGE value="unittest" />
+    <MESSAGE value="网络错误bug解决" />
+    <option name="LAST_COMMIT_MESSAGE" value="网络错误bug解决" />
+  </${package}ponent>
+  <${package}ponent name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </${package}ponent>
+</project>

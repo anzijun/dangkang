@@ -1,0 +1,26 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <${package}ponent name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="${project-name}-domain" />
+        <module name="bond-adapter" />
+        <module name="bond-domain" />
+        <module name="${project-name}-start" />
+        <module name="bond-app" />
+        <module name="bond-infrastructure" />
+        <module name="${project-name}-adapter" />
+        <module name="bond-client" />
+        <module name="${project-name}-client" />
+        <module name="${project-name}-app" />
+        <module name="${project-name}-infrastructure" />
+      </profile>
+    </annotationProcessing>
+  </${package}ponent>
+</project>
