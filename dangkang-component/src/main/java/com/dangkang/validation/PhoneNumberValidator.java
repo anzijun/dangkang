@@ -1,4 +1,4 @@
-package com.dangkang.validation.validator;
+package com.dangkang.validation;
 
 import com.baidu.unbiz.fluentvalidator.ValidationError;
 import com.baidu.unbiz.fluentvalidator.Validator;
