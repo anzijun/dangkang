@@ -3,7 +3,7 @@ package com.dangkang.examplecontext.app.ability.service;
 import com.dangkang.examplecontext.domain.facade.ExternalAccessFacade;
 import com.dangkang.examplecontext.domain.model.DomainObject;
 import com.dangkang.examplecontext.domain.repository.ExampleAggregateRootRepository;
-import com.dangkang.examplecontext.infrastructure.converter.ExampleContextConverter;
+import com.dangkang.examplecontext.infrastructure.converter.ExampleConverter;
 import com.dangkang.exception.DangKangAppException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,7 +38,7 @@ public class DomainService {
                                             .setPromptMessage(ERR_DOMAIN_SERVICE_MESSAGE);
         }
         // 3.3 调用第三方接口
-        externalAccessFacade.call(ExampleContextConverter.INSTANCE.toCallRequestDto(domainObject));
+        externalAccessFacade.call(ExampleConverter.INSTANCE.convertCallRequestDto(domainObject));
         logger.info("externalAccessFacade.call执行成功,客户号是[{}]",domainObject.getEmail());
     }
 

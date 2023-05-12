@@ -1,10 +1,12 @@
-package com.dangkang.examplecontext.client.dto.request;
-
-import com.dangkang.application.dto.request.AbstractRequest;
+package com.dangkang.examplecontext.app.service.dto.request;
 
 
-public class ExampleServiceRequest extends AbstractRequest {
+import com.dangkang.application.dto.request.MultipleQueryRequest;
 
+/**
+ * @date 2023/1/11 10:48
+ */
+public class ExampleQueryRequestDTO extends MultipleQueryRequest {
 
     private String email;
 

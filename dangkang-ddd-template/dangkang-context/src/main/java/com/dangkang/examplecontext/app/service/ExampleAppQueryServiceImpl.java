@@ -4,9 +4,12 @@ import com.baidu.unbiz.fluentvalidator.annotation.FluentValid;
 import com.dangkang.application.annotation.ServiceDesc;
 import com.dangkang.application.dto.response.MultipleResponse;
 import com.dangkang.examplecontext.client.api.ExampleAppQueryService;
+import com.dangkang.examplecontext.app.service.dto.request.ExampleQueryRequestDTO;
+import com.dangkang.examplecontext.app.service.dto.response.ExampleQueryResponseDTO;
 import com.dangkang.examplecontext.client.dto.request.ExampleQueryRequest;
-import com.dangkang.examplecontext.client.dto.response.ExampleQueryResult;
+import com.dangkang.examplecontext.client.dto.response.ExampleQueryResponse;
 import com.dangkang.examplecontext.domain.repository.ExampleAggregateRootRepository;
+import com.dangkang.examplecontext.infrastructure.converter.ExampleConverter;
 import com.dangkang.exception.annotation.ExceptionAndValid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,20 +31,25 @@ public class ExampleAppQueryServiceImpl implements ExampleAppQueryService {
     @Autowired
     private ExampleAggregateRootRepository domainObjectRepository;
 
-    @Override
+
     @ExceptionAndValid
     @ServiceDesc(ServiceCode = "T002",ServiceName = "当康应用查询服务")
-    public MultipleResponse<ExampleQueryResult> queryService(@FluentValid(isFailFast = false) ExampleQueryRequest exampleQueryRequest) {
+    public ExampleQueryResponseDTO queryService(@FluentValid(isFailFast = false) ExampleQueryRequestDTO exampleQueryRequestDTO) {
 
-        MultipleResponse<ExampleQueryResult> response = new MultipleResponse<>();
-        int index = exampleQueryRequest.getIndex();
-        int size = exampleQueryRequest.getSize();
-        String email = exampleQueryRequest.getEmail();
-         Map<String,Object> pages = domainObjectRepository.findPage(index,size,email);
-        response.buildPage( pages);
+        ExampleQueryResponseDTO response = new ExampleQueryResponseDTO();
+        int index = exampleQueryRequestDTO.getIndex();
+        int size = exampleQueryRequestDTO.getSize();
+        String email = exampleQueryRequestDTO.getEmail();
+        response.setEmail(email);
         response.buildSuccess(SERVICE_CODE, SERVICE_NAME);
         return response;
 
     }
 
+    @Override
+    public ExampleQueryResponse queryService(ExampleQueryRequest exampleQueryRequest) {
+        ExampleQueryRequestDTO requestDTO= ExampleConverter.INSTANCE.convert(exampleQueryRequest);
+        ExampleQueryResponseDTO response=this.queryService((requestDTO));
+        return ExampleConverter.INSTANCE.convert(response);
+    }
 }

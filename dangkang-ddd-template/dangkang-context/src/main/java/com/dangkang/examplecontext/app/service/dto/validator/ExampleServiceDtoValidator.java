@@ -1,4 +1,4 @@
-package com.dangkang.examplecontext.client.dto.validator;
+package com.dangkang.examplecontext.app.service.dto.validator;
 
 import com.baidu.unbiz.fluentvalidator.Validator;
 import com.baidu.unbiz.fluentvalidator.ValidatorContext;

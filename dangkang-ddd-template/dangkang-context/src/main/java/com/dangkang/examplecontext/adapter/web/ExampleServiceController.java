@@ -1,13 +1,16 @@
 package com.dangkang.examplecontext.adapter.web;
 
 import com.dangkang.application.dto.response.MultipleResponse;
-import com.dangkang.application.dto.response.Response;
 import com.dangkang.examplecontext.client.api.ExampleAppQueryService;
 import com.dangkang.examplecontext.client.api.ExampleAppService;
+import com.dangkang.examplecontext.app.service.dto.request.ExampleQueryRequestDTO;
+import com.dangkang.examplecontext.app.service.dto.request.ExampleServiceRequestDTO;
+import com.dangkang.examplecontext.app.service.dto.response.ExampleServiceResponseDTO;
+import com.dangkang.examplecontext.app.service.dto.response.ExampleQueryResponseDTO;
 import com.dangkang.examplecontext.client.dto.request.ExampleQueryRequest;
 import com.dangkang.examplecontext.client.dto.request.ExampleServiceRequest;
-import com.dangkang.examplecontext.client.dto.response.ExampleServiceResult;
-import com.dangkang.examplecontext.client.dto.response.ExampleQueryResult;
+import com.dangkang.examplecontext.client.dto.response.ExampleQueryResponse;
+import com.dangkang.examplecontext.client.dto.response.ExampleServiceResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,19 +35,19 @@ public class ExampleServiceController {
 
     @PostMapping("/hello")
     @ResponseBody
-    public Response<ExampleServiceResult> execute(@RequestBody ExampleServiceRequest exampleServiceRequest){
+    public ExampleServiceResponse execute(@RequestBody ExampleServiceRequest exampleServiceRequest){
 
         logger.info("ExampleService请求参数 request = [{}]", exampleServiceRequest);
-        Response<ExampleServiceResult> response = exampleAppService.execute(exampleServiceRequest);
+        ExampleServiceResponse response = exampleAppService.execute(exampleServiceRequest);
         logger.info("ExampleService响应参数 response = [{}]",response);
         return response;
     }
 
     @PostMapping("/query")
     @ResponseBody
-    public MultipleResponse queryService(ExampleQueryRequest applicationQueryRequest){
-        logger.info("ExampleQueryService请求参数 request = [{}]",applicationQueryRequest);
-        MultipleResponse<ExampleQueryResult> response = exampleAppQueryService.queryService(applicationQueryRequest);
+    public ExampleQueryResponse queryService(ExampleQueryRequest queryRequest){
+        logger.info("ExampleQueryService请求参数 request = [{}]",queryRequest);
+        ExampleQueryResponse response = exampleAppQueryService.queryService(queryRequest);
         logger.info("ExampleQueryService响应参数 response = [{}]",response);
         return response;
     }

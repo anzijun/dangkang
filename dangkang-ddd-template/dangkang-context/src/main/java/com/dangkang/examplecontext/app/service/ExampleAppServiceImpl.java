@@ -5,11 +5,13 @@ import com.dangkang.examplecontext.app.ability.factory.ExampleContextFactory;
 import com.dangkang.examplecontext.app.ability.rule.DomainBusinessRuleCheck;
 import com.dangkang.examplecontext.app.ability.service.DomainService;
 import com.dangkang.application.annotation.ServiceDesc;
-import com.dangkang.application.dto.response.Response;
 import com.dangkang.examplecontext.client.api.ExampleAppService;
+import com.dangkang.examplecontext.app.service.dto.request.ExampleServiceRequestDTO;
+import com.dangkang.examplecontext.app.service.dto.response.ExampleServiceResponseDTO;
 import com.dangkang.examplecontext.client.dto.request.ExampleServiceRequest;
-import com.dangkang.examplecontext.client.dto.response.ExampleServiceResult;
+import com.dangkang.examplecontext.client.dto.response.ExampleServiceResponse;
 import com.dangkang.examplecontext.domain.model.DomainObject;
+import com.dangkang.examplecontext.infrastructure.converter.ExampleConverter;
 import com.dangkang.exception.annotation.ExceptionAndValid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,9 +41,7 @@ public class ExampleAppServiceImpl implements ExampleAppService {
 
     @ExceptionAndValid
     @ServiceDesc(ServiceCode = "T001",ServiceName = "DDD应用服务")
-    public Response<ExampleServiceResult> execute(@FluentValid(isFailFast=false) ExampleServiceRequest exampleServiceRequest) {
-        Response<ExampleServiceResult> response = new Response<>();
-        ExampleServiceResult exampleServiceResult = new ExampleServiceResult();
+    public ExampleServiceResponseDTO execute(@FluentValid(isFailFast=false) ExampleServiceRequestDTO exampleServiceRequest) {
 
             // 1 调用工厂初始化（ddd 工厂）
             DomainObject domainObject = domanObjectFactory.initDomainObject(exampleServiceRequest);
@@ -58,9 +58,16 @@ public class ExampleAppServiceImpl implements ExampleAppService {
             logger.info("ExampleServiceTransaction.transaction事务服务执行成功,客户号是[{}]", exampleServiceRequest.getEmail());
 
             // 5 构建成功返回
+            ExampleServiceResponseDTO response = new ExampleServiceResponseDTO();
             response.buildSuccess(SERVICE_CODE, SERVICE_NAME);
-            response.setData(exampleServiceResult);
+            response.setData("ok");
             logger.info("exampleAppService.execute执行成功,客户号是[{}]", exampleServiceRequest.getEmail());
         return response;
+    }
+
+    @Override
+    public ExampleServiceResponse execute(ExampleServiceRequest exampleServiceRequest) {
+        ExampleServiceResponseDTO  responseDTO=this.execute(ExampleConverter.INSTANCE.convert(exampleServiceRequest));
+        return ExampleConverter.INSTANCE.convert(responseDTO);
     }
 }

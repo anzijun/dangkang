@@ -2,13 +2,13 @@ package com.dangkang.examplecontext.infrastructure.repository;
 
 import com.dangkang.examplecontext.infrastructure.repository.dataobject.DomainObjectDO;
 import com.dangkang.examplecontext.infrastructure.repository.mapper.DomainObjectMapper;
-import com.dangkang.examplecontext.client.dto.response.ExampleQueryResult;
+import com.dangkang.examplecontext.app.service.dto.response.ExampleQueryResponseDTO;
 import com.dangkang.examplecontext.domain.model.DomainObject;
 import com.dangkang.examplecontext.domain.repository.ExampleAggregateRootRepository;
 import com.dangkang.exception.DangKangAppException;
 import com.dangkang.exception.DataBaseException;
 import com.dangkang.exception.database.DataBaseErrorManager;
-import com.dangkang.examplecontext.infrastructure.converter.ExampleContextConverter;
+import com.dangkang.examplecontext.infrastructure.converter.ExampleConverter;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +33,7 @@ public class ExampleAggregateRepositoryImpl implements ExampleAggregateRootRepos
            throw new DangKangAppException().setErrorCode(ERR_DOMAINOBJECT_NOT_FOUND_CODE)
                                             .setPromptMessage(ERR_DOMAINOBJECT_NOT_FOUND_MESSAGE);
        }
-       return ExampleContextConverter.INSTANCE.toDomainObject(domainObjectDO);
+       return ExampleConverter.INSTANCE.convert(domainObjectDO);
        
     }
 
@@ -44,7 +44,7 @@ public class ExampleAggregateRepositoryImpl implements ExampleAggregateRootRepos
     @Override
     public void update(DomainObject domainObject) {
 
-        DomainObjectDO domainObjectDO = ExampleContextConverter.INSTANCE.toDomainObjectDO(domainObject);
+        DomainObjectDO domainObjectDO = ExampleConverter.INSTANCE.convert(domainObject);
 
         try {
             domainObjectMapper.update(domainObjectDO);
@@ -58,10 +58,10 @@ public class ExampleAggregateRepositoryImpl implements ExampleAggregateRootRepos
     public Map<String,Object> findPage(int index, int size, String email) {
         PageHelper.startPage(index,size);
 
-        List<DomainObject> domainObjects = ExampleContextConverter.INSTANCE.toDomainObjectList(domainObjectMapper.findList(index,size,email));
-        List<ExampleQueryResult> exampleQueryResultList = ExampleContextConverter.INSTANCE.toQueryResultDataDtoList(domainObjects);
+        List<DomainObject> domainObjects = ExampleConverter.INSTANCE.convert(domainObjectMapper.findList(index,size,email));
+        List<ExampleQueryResponseDTO> exampleQueryResponseDTOList = ExampleConverter.INSTANCE.convertQueryResultDataDtoList(domainObjects);
 
-        PageInfo<ExampleQueryResult> pageInfo = new PageInfo<>(exampleQueryResultList);
+        PageInfo<ExampleQueryResponseDTO> pageInfo = new PageInfo<>(exampleQueryResponseDTOList);
         Map<String,Object> pageMap = new HashMap<>();
         pageMap.put("totalPages",pageInfo.getPages());
         pageMap.put("totalSize",pageInfo.getSize());
