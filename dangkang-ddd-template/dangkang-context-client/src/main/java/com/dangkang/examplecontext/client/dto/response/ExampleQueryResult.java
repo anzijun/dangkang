@@ -1,15 +1,11 @@
-package com.dangkang.examplecontext.client.dto.request;
-
-
-import com.dangkang.application.dto.request.MultipleQueryRequest;
+package com.dangkang.examplecontext.client.dto.response;
 
 /**
- * @date 2023/1/11 10:48
+ * @date 2023/1/11 17:17
  */
-public class ExampleQueryRequestDTO extends MultipleQueryRequest {
-
+public class ExampleQueryResult {
+    //todo 查询返回结果的数据属性定义
     private String email;
-
     private String phoneNumber;
 
     public String getEmail() {
@@ -27,5 +23,4 @@ public class ExampleQueryRequestDTO extends MultipleQueryRequest {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-
 }

@@ -4,8 +4,8 @@ import com.baidu.unbiz.fluentvalidator.annotation.FluentValid;
 import com.dangkang.application.annotation.ServiceDesc;
 import com.dangkang.application.dto.response.MultipleResponse;
 import com.dangkang.examplecontext.client.api.ExampleAppQueryService;
-import com.dangkang.examplecontext.client.dto.request.ExampleQueryRequestDTO;
-import com.dangkang.examplecontext.client.dto.response.ExampleQueryResultDTO;
+import com.dangkang.examplecontext.client.dto.request.ExampleQueryRequest;
+import com.dangkang.examplecontext.client.dto.response.ExampleQueryResult;
 import com.dangkang.examplecontext.domain.repository.ExampleAggregateRootRepository;
 import com.dangkang.exception.annotation.ExceptionAndValid;
 import org.slf4j.Logger;
@@ -31,12 +31,12 @@ public class ExampleAppQueryServiceImpl implements ExampleAppQueryService {
     @Override
     @ExceptionAndValid
     @ServiceDesc(ServiceCode = "T002",ServiceName = "当康应用查询服务")
-    public MultipleResponse<ExampleQueryResultDTO> queryService(@FluentValid(isFailFast = false) ExampleQueryRequestDTO exampleQueryRequestDTO) {
+    public MultipleResponse<ExampleQueryResult> queryService(@FluentValid(isFailFast = false) ExampleQueryRequest exampleQueryRequest) {
 
-        MultipleResponse<ExampleQueryResultDTO> response = new MultipleResponse<>();
-        int index = exampleQueryRequestDTO.getIndex();
-        int size = exampleQueryRequestDTO.getSize();
-        String email = exampleQueryRequestDTO.getEmail();
+        MultipleResponse<ExampleQueryResult> response = new MultipleResponse<>();
+        int index = exampleQueryRequest.getIndex();
+        int size = exampleQueryRequest.getSize();
+        String email = exampleQueryRequest.getEmail();
          Map<String,Object> pages = domainObjectRepository.findPage(index,size,email);
         response.buildPage( pages);
         response.buildSuccess(SERVICE_CODE, SERVICE_NAME);

@@ -7,8 +7,8 @@ import com.dangkang.examplecontext.app.ability.service.DomainService;
 import com.dangkang.application.annotation.ServiceDesc;
 import com.dangkang.application.dto.response.Response;
 import com.dangkang.examplecontext.client.api.ExampleAppService;
-import com.dangkang.examplecontext.client.dto.request.ExampleServiceRequestDTO;
-import com.dangkang.examplecontext.client.dto.response.ExampleServiceResultDTO;
+import com.dangkang.examplecontext.client.dto.request.ExampleServiceRequest;
+import com.dangkang.examplecontext.client.dto.response.ExampleServiceResult;
 import com.dangkang.examplecontext.domain.model.DomainObject;
 import com.dangkang.exception.annotation.ExceptionAndValid;
 import org.slf4j.Logger;
@@ -39,28 +39,28 @@ public class ExampleAppServiceImpl implements ExampleAppService {
 
     @ExceptionAndValid
     @ServiceDesc(ServiceCode = "T001",ServiceName = "DDD应用服务")
-    public Response<ExampleServiceResultDTO> execute(@FluentValid(isFailFast=false) ExampleServiceRequestDTO exampleServiceRequestDTO) {
-        Response<ExampleServiceResultDTO> response = new Response<>();
-        ExampleServiceResultDTO exampleServiceResultDTO = new ExampleServiceResultDTO();
+    public Response<ExampleServiceResult> execute(@FluentValid(isFailFast=false) ExampleServiceRequest exampleServiceRequest) {
+        Response<ExampleServiceResult> response = new Response<>();
+        ExampleServiceResult exampleServiceResult = new ExampleServiceResult();
 
             // 1 调用工厂初始化（ddd 工厂）
-            DomainObject domainObject = domanObjectFactory.initDomainObject(exampleServiceRequestDTO);
+            DomainObject domainObject = domanObjectFactory.initDomainObject(exampleServiceRequest);
             // 2 业务规则（领域服务）
             domainLogicalCheck.check(domainObject);
-            logger.info("DomainLogicalRule.check领域逻辑规则校验成功,客户号是[{}]",exampleServiceRequestDTO.getEmail());
+            logger.info("DomainLogicalRule.check领域逻辑规则校验成功,客户号是[{}]", exampleServiceRequest.getEmail());
 
             // 3 领域服务
             domainService.doService(domainObject);
-            logger.info("DomainService.doService领域服务执行成功,客户号是[{}]",exampleServiceRequestDTO.getEmail());
+            logger.info("DomainService.doService领域服务执行成功,客户号是[{}]", exampleServiceRequest.getEmail());
 
             // 4 带事务的领域服务执行
             exampleServiceTransaction.transaction(domainObject);
-            logger.info("ExampleServiceTransaction.transaction事务服务执行成功,客户号是[{}]",exampleServiceRequestDTO.getEmail());
+            logger.info("ExampleServiceTransaction.transaction事务服务执行成功,客户号是[{}]", exampleServiceRequest.getEmail());
 
             // 5 构建成功返回
             response.buildSuccess(SERVICE_CODE, SERVICE_NAME);
-            response.setData(exampleServiceResultDTO);
-            logger.info("exampleAppService.execute执行成功,客户号是[{}]",exampleServiceRequestDTO.getEmail());
+            response.setData(exampleServiceResult);
+            logger.info("exampleAppService.execute执行成功,客户号是[{}]", exampleServiceRequest.getEmail());
         return response;
     }
 }

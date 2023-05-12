@@ -1,11 +1,13 @@
 package com.dangkang.examplecontext.client.dto.response;
 
+import com.dangkang.application.dto.response.Response;
+
 /**
  *
  * ApplicationServiceResult是ddd定义的dto，用于applicationService处理结果的返回值给ApplicationServiceController(ddd定义的adapter)
  * @date 2022/12/18 17:36
  */
-public class ExampleServiceResultDTO {
+public class ExampleServiceResult  extends Response<String> {
 
     //todo 定义返回属性
     private String Data;

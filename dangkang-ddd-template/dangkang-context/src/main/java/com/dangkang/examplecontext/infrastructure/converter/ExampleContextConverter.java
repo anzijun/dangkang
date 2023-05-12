@@ -1,7 +1,7 @@
 package com.dangkang.examplecontext.infrastructure.converter;
 
 import com.dangkang.examplecontext.infrastructure.repository.dataobject.DomainObjectDO;
-import com.dangkang.examplecontext.client.dto.response.ExampleQueryResultDTO;
+import com.dangkang.examplecontext.client.dto.response.ExampleQueryResult;
 import com.dangkang.examplecontext.domain.facade.CallRequest;
 import com.dangkang.examplecontext.domain.model.DomainObject;
 import org.mapstruct.Mapper;
@@ -25,6 +25,6 @@ public interface ExampleContextConverter {
 
     List<DomainObject> toDomainObjectList(List<DomainObjectDO> domainObjects);
 
-    List<ExampleQueryResultDTO> toQueryResultDataDtoList(List<DomainObject> domainObjects);
+    List<ExampleQueryResult> toQueryResultDataDtoList(List<DomainObject> domainObjects);
 
 }

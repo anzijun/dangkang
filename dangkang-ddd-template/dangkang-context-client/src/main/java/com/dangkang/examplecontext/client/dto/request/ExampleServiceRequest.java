@@ -2,10 +2,11 @@ package com.dangkang.examplecontext.client.dto.request;
 
 import com.baidu.unbiz.fluentvalidator.annotation.FluentValidate;
 import com.dangkang.application.dto.request.AbstractRequest;
-import com.dangkang.validation.validator.PhoneNumberValidator;
+
+import com.dangkang.examplecontext.client.dto.validator.PhoneNumberValidator;
 import org.hibernate.validator.constraints.NotBlank;
 
-public class ExampleServiceRequestDTO extends AbstractRequest {
+public class ExampleServiceRequest extends AbstractRequest {
 
     @NotBlank(message = "邮箱不能为空'")
     private String email;

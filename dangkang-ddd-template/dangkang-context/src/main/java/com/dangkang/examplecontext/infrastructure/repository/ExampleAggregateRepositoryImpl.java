@@ -2,7 +2,7 @@ package com.dangkang.examplecontext.infrastructure.repository;
 
 import com.dangkang.examplecontext.infrastructure.repository.dataobject.DomainObjectDO;
 import com.dangkang.examplecontext.infrastructure.repository.mapper.DomainObjectMapper;
-import com.dangkang.examplecontext.client.dto.response.ExampleQueryResultDTO;
+import com.dangkang.examplecontext.client.dto.response.ExampleQueryResult;
 import com.dangkang.examplecontext.domain.model.DomainObject;
 import com.dangkang.examplecontext.domain.repository.ExampleAggregateRootRepository;
 import com.dangkang.exception.DangKangAppException;
@@ -59,9 +59,9 @@ public class ExampleAggregateRepositoryImpl implements ExampleAggregateRootRepos
         PageHelper.startPage(index,size);
 
         List<DomainObject> domainObjects = ExampleContextConverter.INSTANCE.toDomainObjectList(domainObjectMapper.findList(index,size,email));
-        List<ExampleQueryResultDTO> exampleQueryResultDtoList = ExampleContextConverter.INSTANCE.toQueryResultDataDtoList(domainObjects);
+        List<ExampleQueryResult> exampleQueryResultList = ExampleContextConverter.INSTANCE.toQueryResultDataDtoList(domainObjects);
 
-        PageInfo<ExampleQueryResultDTO> pageInfo = new PageInfo<>(exampleQueryResultDtoList);
+        PageInfo<ExampleQueryResult> pageInfo = new PageInfo<>(exampleQueryResultList);
         Map<String,Object> pageMap = new HashMap<>();
         pageMap.put("totalPages",pageInfo.getPages());
         pageMap.put("totalSize",pageInfo.getSize());

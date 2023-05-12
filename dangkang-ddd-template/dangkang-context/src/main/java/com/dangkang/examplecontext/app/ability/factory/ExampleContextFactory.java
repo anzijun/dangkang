@@ -1,6 +1,6 @@
 package com.dangkang.examplecontext.app.ability.factory;
 
-import com.dangkang.examplecontext.client.dto.request.ExampleServiceRequestDTO;
+import com.dangkang.examplecontext.client.dto.request.ExampleServiceRequest;
 import com.dangkang.examplecontext.domain.model.DomainObject;
 import org.springframework.stereotype.Component;
 /*
@@ -17,10 +17,10 @@ public class ExampleContextFactory {
         return domainObject;
     }
 
-    public DomainObject initDomainObject(ExampleServiceRequestDTO exampleServiceRequestDTO) {
+    public DomainObject initDomainObject(ExampleServiceRequest exampleServiceRequest) {
         DomainObject domainObject = new DomainObject();
-        domainObject.setEmail(exampleServiceRequestDTO.getEmail()).
-                                 setPhoneNumber(exampleServiceRequestDTO.getPhoneNumber());
+        domainObject.setEmail(exampleServiceRequest.getEmail()).
+                                 setPhoneNumber(exampleServiceRequest.getPhoneNumber());
         return domainObject;
     }
 }
