@@ -8,7 +8,6 @@
     <artifactId>dangkang-report</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
-
         <dependency>
             <groupId>com.dangkang</groupId>
             <artifactId>dangkang-component</artifactId>
