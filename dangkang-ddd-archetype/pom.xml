@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.dangkang</groupId>
-  <artifactId>dangkang-archetype</artifactId>
-  <version>1.0.1</version>
+  <artifactId>dangkang-ddd-template-archetype</artifactId>
+  <version>1.0-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
-  <name>dangkang-archetype</name>
+  <name>dangkang-ddd-template-archetype</name>
 
   <build>
     <extensions>
